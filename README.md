@@ -25,7 +25,7 @@
 
 1. **Figma Link**
     - Access the provided **Figma link** to review the UI designs. (The link will be shared with you upon request.)
-    - https://www.figma.com/design/MrG620iW8A7lDRP04xUnWH/weltenters-test?node-id=2-2&m=dev&t=E7nQdgf9eBJCaC4X-1
+    - https://www.figma.com/design/ACuP2Jab656NAHQjPt3Nbp/Frontend-Developer-Test?node-id=2-2&p=f&t=LcWbSp5MKWhYfAGZ-0
 2. **Request Access**
 
     - If you are unable to access the Figma file, request permission as soon as possible.
@@ -38,10 +38,12 @@
 
 ## C. **Tasks to Complete**
 
-- Build the **/casting** page based on the Figma design.
-- **No REST API integration is required**; focus solely on creating the user interface.
+- Build the main page based on the Figma design.
+- **No API integration is required**; focus solely on creating the user interface.
 
-## D. **Submission Guidelines**
+## D. ** Time Tracking & Submission Guidelines**
+
+Accurately record the time taken to complete this task
 
 1. **Git Workflow**
 
