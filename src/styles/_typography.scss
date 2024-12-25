@@ -1,0 +1,18 @@
+@use "variables" as variables;
+@use "_mixins" as mixins;
+
+@each $size, $value in variables.$font-sizes {
+    @each $weight, $weight-value in variables.$font-weights {
+        .text-#{$size}-#{$weight} {
+            @include mixins.typography($size, $weight);
+        }
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}

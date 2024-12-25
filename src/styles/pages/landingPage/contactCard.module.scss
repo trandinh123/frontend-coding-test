@@ -1,0 +1,51 @@
+@use '~styles/colors' as colors;
+@use '~styles/mixins' as *;
+
+.container {
+    padding: 20px;
+    @include respond-to('2xl') {
+        padding-block: 80px;
+    }
+}
+
+.card {
+    position: relative;
+    border-radius: 16px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    max-width: 846px;
+    margin: auto;
+    img {
+        border-radius: 16px;
+    }
+    &__title,
+    &__description {
+        color: white;
+        text-align: center;
+    }
+    &__description {
+        margin-top: 4px;
+    }
+    button {
+        background-color: #f2f2f2;
+        color: colors.$content-primary;
+        margin-top: 20px;
+        margin-inline: auto;
+    }
+    @include respond-to('2xl') {
+        padding: 64px;
+        &__title {
+            font-size: 60px;
+            line-height: 100%;
+        }
+        &__description {
+            font-size: 18px;
+            line-height: 28px;
+            margin-top: 12px;
+        }
+        button {
+            margin-top: 28px
+        }
+    }
+}

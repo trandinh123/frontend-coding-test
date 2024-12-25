@@ -1,0 +1,22 @@
+@use '~styles/mixins' as *;
+
+.button {
+  border-radius: 8px;
+  padding-inline: 28px;
+  padding-block: 16px;
+  border: none;
+  background-color: #030712;
+  color: #f9fafb;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+  @include respond-to('2xl') {
+    padding: 25.5px 16px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+}

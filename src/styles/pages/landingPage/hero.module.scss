@@ -1,0 +1,67 @@
+@use '../../mixins' as *;
+
+.container {
+    :global(.bg-img-card__img) {
+        object-fit: cover;
+        border-radius: 20px;
+        object-position: -60px 4px;
+        @include respond-to('sm') {
+            object-position: center;
+        }
+        @include respond-to('2xl') {
+            border-radius: 0;
+        }
+    }
+}
+
+.card {
+    border-radius: 20px;
+    margin: 4px 20px;
+    padding-left: 128px;
+    padding-block: 40px;
+    @include respond-to('2xl') {
+        margin: 0;
+        padding-right: 160px;
+        padding-block: 162px;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    margin-left: auto;
+    width: max(207px, 40%);
+    @include respond-to('2xl') {
+        width: 692px;
+        gap: 24px;
+    }
+}
+
+.title {
+    text-align: start;
+    margin-right: auto;
+    @include respond-to('2xl') {
+        font-size: 72px;
+        line-height: 100%;
+    }
+}
+
+.apply-button {
+    margin-right: auto;
+    @include respond-to('2xl') {
+        padding: 24px 32px;
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+
+.description {
+    width: 100%;
+    text-align: start;
+    @include respond-to('2xl') {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}

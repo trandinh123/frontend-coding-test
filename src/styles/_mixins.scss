@@ -1,0 +1,19 @@
+@use "sass:map";
+@use "variables" as variables;
+
+@mixin typography($size, $weight: regular) {
+    font-size: map.get(variables.$font-sizes, $size);
+    font-weight: map.get(variables.$font-weights, $weight);
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin respond-to($breakpoint) {
+    @media (min-width: map.get(variables.$breakpoints, $breakpoint)) {
+        @content;
+    }
+}
