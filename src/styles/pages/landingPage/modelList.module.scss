@@ -1,5 +1,5 @@
-@use '../../colors' as colors;
-@use '../../mixins' as *;
+@use '~styles/colors' as colors;
+@use '~styles/mixins' as *;
 
 .container {
     padding-block: 20px;

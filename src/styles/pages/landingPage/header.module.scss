@@ -1,4 +1,4 @@
-@use '../../mixins' as *;
+@use '~styles/mixins' as *;
 
 .container {
     display: flex;
@@ -9,29 +9,27 @@
         padding: 8px 80px;
     }
     button {
-      display: none;
-      @include respond-to('lg') {
-        display: block;
-        padding: 14px 16px;
-        font-size: 14px;
-        line-height: 16px;
-      }
+        display: none;
+        @include respond-to('lg') {
+            display: block;
+            padding: 14px 16px;
+            font-size: 14px;
+            line-height: 16px;
+        }
     }
 }
 
 .sub-menu {
-  display: none;
-  @include respond-to('lg') {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  & > div {
-    padding: 14px 16px;
-  }
+    display: none;
+    @include respond-to('lg') {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    & > div {
+        padding: 14px 16px;
+    }
 }
-
-
 
 .icon {
     margin: 16px;

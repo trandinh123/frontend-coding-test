@@ -1,5 +1,5 @@
-@use "sass:map";
-@use "variables" as variables;
+@use 'sass:map';
+@use 'variables' as variables;
 
 @mixin typography($size, $weight: regular) {
     font-size: map.get(variables.$font-sizes, $size);

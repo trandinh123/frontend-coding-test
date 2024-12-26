@@ -1,4 +1,3 @@
-import '@/styles/pages/landingPage/index.scss';
 import Hero from './components/sections/Hero';
 import ModelList from './components/sections/ModelList';
 import OurStories from './components/sections/OurStories';

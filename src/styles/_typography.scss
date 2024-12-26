@@ -1,5 +1,5 @@
-@use "variables" as variables;
-@use "_mixins" as mixins;
+@use 'variables' as variables;
+@use '_mixins' as mixins;
 
 @each $size, $value in variables.$font-sizes {
     @each $weight, $weight-value in variables.$font-weights {
