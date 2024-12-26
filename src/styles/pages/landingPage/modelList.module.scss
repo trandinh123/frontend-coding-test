@@ -1,0 +1,86 @@
+@use '~styles/colors' as colors;
+@use '~styles/mixins' as *;
+
+.container {
+    padding-block: 20px;
+    @include respond-to('2xl') {
+        padding-block: 80px;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 20px;
+    @include respond-to('2xl') {
+        padding-inline: 0;
+        &__title {
+            font-size: 72px;
+            line-height: 100%;
+        }
+    }
+}
+
+.view-all-button {
+    background: transparent;
+    padding: 0;
+    span {
+        display: none;
+    }
+    @include respond-to('2xl') {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: colors.$gray-200;
+        padding: 22px 16px;
+        span {
+            display: block;
+            color: colors.$content-primary;
+            font-size: 18px;
+            line-height: 20px;
+        }
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.list-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 12px;
+    margin-left: 20px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    @include respond-to('2xl') {
+        margin-top: 24px;
+        margin-left: 0;
+    }
+}
+
+.list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    img {
+        border-radius: 8px;
+        min-width: 218px;
+        height: auto;
+    }
+    &__location {
+        opacity: 0.6;
+        color: colors.$content-primary;
+    }
+    @include respond-to('2xl') {
+        gap: 16px;
+        img {
+            min-width: 287px;
+            height: auto;
+        }
+    }
+}

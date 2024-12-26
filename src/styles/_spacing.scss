@@ -1,0 +1,22 @@
+@use 'variables' as variables;
+
+@for $i from 1 through 10 {
+    .m-#{$i} {
+        margin: ($i * 4) * 1px;
+    }
+    .p-#{$i} {
+        padding: ($i * 4) * 1px;
+    }
+
+    .p-x {
+        padding-inline: ($i * 4) * 1px;
+    }
+
+    .p-y {
+        padding-block: ($i * 4) * 1px;
+    }
+
+    .leading-#{$i} {
+        line-height: ($i * 4) * 1px;
+    }
+}

@@ -1,4 +1,4 @@
-import '@/styles/mainPage.scss';
+import '@/styles/pages/mainPage/index.scss';
 import Link from 'next/link';
 
 export default function Home() {

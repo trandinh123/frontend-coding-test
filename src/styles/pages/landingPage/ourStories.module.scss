@@ -1,0 +1,104 @@
+@use '~styles/mixins' as *;
+@use '~styles/colors' as colors;
+
+.container {
+    display: grid;
+    gap: 12px;
+    padding: 20px;
+    @include respond-to('2xl') {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        padding: 0;
+        margin-block: 80px;
+    }
+}
+
+.header {
+    color: #111827;
+    @include respond-to('2xl') {
+        font-size: 72px;
+        line-height: 100%;
+        width: 520px;
+        margin-top: auto;
+    }
+}
+
+.image-slide {
+    :global(.bg-img-card__img) {
+        border-radius: 20px;
+        object-fit: cover;
+        filter: grayscale(1);
+    }
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    &__title {
+        text-align: end;
+    }
+    &__description {
+        margin-top: 6px;
+        text-align: end;
+    }
+    &__navigation {
+        margin-top: 110px;
+        margin-left: auto;
+    }
+    @include respond-to('2xl') {
+        width: 712px;
+        grid-row: span 2 / span 2;
+        padding: 32px;
+        &__title {
+            font-size: 24px;
+            line-height: 32px;
+        }
+        &__description {
+            font-size: 48px;
+            line-height: 48px;
+            padding-left: 80px;
+            margin-top: 12px;
+        }
+        &__navigation {
+            margin-top: 83.5px;
+        }
+    }
+}
+
+.arrow-container {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    margin-top: 83.5px;
+    @include respond-to('2xl') {
+        display: flex;
+    }
+}
+
+.icon-button {
+    padding: 16px;
+    border: 1px solid colors.$neutral;
+    border-radius: 8px;
+    &--disabled {
+        @extend .icon-button;
+        border: 1px solid colors.$content-primary;
+    }
+}
+
+.cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    @include respond-to('2xl') {
+        margin-bottom: auto;
+        margin-top: 32px;
+        button {
+            font-size: 18px;
+            line-height: 20px;
+            padding: 25px 32px;
+        }
+        div {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+}

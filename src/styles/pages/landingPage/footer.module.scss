@@ -1,0 +1,121 @@
+@use '~styles/colors' as colors;
+@use '~styles/mixins' as *;
+
+.container {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    a {
+        color: colors.$content-primary;
+        text-decoration: none;
+    }
+    background: #f2f2f2;
+    @include respond-to('2xl') {
+        flex-direction: row;
+        gap: 80px;
+        align-items: start;
+        padding: 40px 80px;
+    }
+}
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.app-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    &__title {
+        color: colors.$content-primary;
+        opacity: 0.6;
+    }
+    @include respond-to('2xl') {
+        flex: 1;
+    }
+}
+
+.page-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    &__logo {
+        div {
+            margin-top: 8px;
+        }
+    }
+    button {
+        margin-right: auto;
+        background: transparent;
+        border: 1px solid #111827;
+        color: #111827;
+    }
+    @include respond-to('2xl') {
+        flex: 1;
+        order: -1;
+        button {
+            display: none;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.social-links-and-language-setting {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .app-navigation__title {
+        display: none;
+    }
+    @include respond-to('2xl') {
+        flex: 1;
+        :global(.select) {
+            display: none;
+        }
+        flex-direction: column;
+        gap: 8px;
+        align-items: start;
+        .app-navigation__title {
+            display: block;
+        }
+    }
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+.copyright {
+    display: none;
+    &__text {
+        color: colors.$neutral;
+        margin-left: 8px;
+    }
+    @include respond-to('2xl') {
+        display: flex;
+        padding: 16px 80px;
+        align-items: center;
+        background: #2b3440;
+    }
+}
+
+.language-setting {
+    color: colors.$bg-default;
+    padding: 8px 34px 8px 12px;
+    border: 1px solid colors.$bg-default;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    margin-left: auto;
+}

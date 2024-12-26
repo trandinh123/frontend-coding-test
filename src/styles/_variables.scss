@@ -1,0 +1,33 @@
+$font-sizes: (
+    xs: 12px,
+    sm: 14px,
+    base: 16px,
+    xl: 20px,
+    2xl: 24px,
+);
+
+$font-weights: (
+    light: 300,
+    regular: 400,
+    normal: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+);
+
+$spacings: (
+    1: 4px,
+    2: 8px,
+    3: 12px,
+    4: 16px,
+    5: 20px,
+    6: 24px,
+);
+
+$breakpoints: (
+    sm: 640px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1280px,
+    '2xl': 1440px,
+);
